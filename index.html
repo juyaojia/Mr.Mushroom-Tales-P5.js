@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="../p5/p5.min.js"></script>
+    <script src="../p5/addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+    <title>Assignment 03 Yaojia Ju</title>
+    <style type="text/css">
+        #bg{
+          background-color: black;
+        }
+
+        h1{
+            color: cornflowerblue;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        p {
+            color: yellow;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            font-size: medium;
+        }
+
+        .list{
+            color: yellowgreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #canvas{
+          border: 2px solid black;
+        }
+
+        #button1, #myMenu{
+          color:gold;
+          padding-left: 5px;
+          margin:auto;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          display:block;
+          background-color: brown;
+          
+        }
+
+        #button:hover{
+          color:blanchedalmond;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="bg">
+      <h1>Welcome to Mrs.Mushroom Tales!</h1>
+      <br/>
+      <div class="list">
+        <ul>
+          <li>Moving left and right using 'A' and 'D' on keyboard, and jumping using 'W' key</li>
+          <li>Using 'G' for laser Gun, 'S' for sword, 'N' for cannon, and 'O' to fire or use the sword</li>
+          <li>Each bullet cost one coin</li>
+          <li>Kill Monsters or Collect coins scattered to get more coins</li>
+          <li>Jumping on Monsters to kill them immediately</li>
+          <li>You have three life, and you can get more by taking the health kit in the sky</li>
+          <li>Click 'PAUSE' to pause the game</li>
+          <li>Use the dropDown menu to choose the difficulty</li>
+        </ul>
+      </div>
+        <br/>
+        <br/>
+        <p><strong>How to win the game: </strong></p><br/><br/><p><strong>when the night has come, collect the magic mushroom using key 'C'! <br/><br/>(Remember that the mushroom is vulnerable. Don't hurt it with any weapon!)</strong></p>
+        <br/>
+        <br/>
+        <div id="p5_loading" style="text-align: center; color: blueviolet; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+          The game is loading...
+        </div>
+      <div id="canvas">
+        <p>Start Now!</p>
+      </div>
+      <br/>
+      <button id="button1" name="button1" onclick="pause(); return false;">
+        PAUSE
+      </button>
+      <br/>
+      <select name="myMenu" id="myMenu" onchange="updateMenu(this);">
+        <option value="o">Difficulty</option>
+        <option value="e">EASY</option>
+        <option value="m">MEDIUM</option>
+        <option value="d">INFERNAL</option>
+      </select>
+      <br/>
+      <br/>
+      <p>
+        This is a character I once designed for myself - Mr. Mushroom. Her aim is to find protect the long lost magic mushroom from the monsters<br/><br/>
+        The inspiration of this game is from mario and an old game on my nokia called "bounce tale". I drew the pixel-style elements in the game.
+        <br/><br/>
+        <br/><br/>
+      </p>
+    </div>
+  </body>
+</html>
